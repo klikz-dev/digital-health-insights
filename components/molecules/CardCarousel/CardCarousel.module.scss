@@ -1,0 +1,35 @@
+.container {
+  @apply flex items-center justify-center gap-4 list-none;
+
+  .item {
+    @apply flex justify-center items-center w-4 h-4 text-sm text-gray-400 rounded-full font-bold;
+
+    &.dots:hover {
+      @apply cursor-default;
+    }
+
+    &:hover {
+      @apply bg-pink-100 cursor-pointer;
+    }
+
+    &.disabled {
+      @apply pointer-events-none cursor-default opacity-40;
+    }
+
+    &.selected {
+      @apply text-purple-dark bg-pink-100;
+    }
+  }
+
+  .arrow {
+    @apply flex justify-center items-center text-gray box-border font-bold;
+
+    &:hover {
+      @apply text-dark cursor-pointer;
+    }
+
+    &.disabled {
+      @apply pointer-events-none cursor-default opacity-40;
+    }
+  }
+}
